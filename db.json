@@ -1,0 +1,113 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "To do 1",
+      "complete": true
+    },
+    {
+      "title": "To to 4 sdfsdafsaf",
+      "complete": true,
+      "id": 5
+    },
+    {
+      "title": "fsdafsdafdsa Update",
+      "complete": true,
+      "id": 6
+    }
+  ],
+  "products": [
+    {
+      "name": "Töpfe",
+      "image": "/src/assets/list1.png",
+      "price": "123",
+      "category": "sản phẩm 2",
+      "id": 1
+    },
+    {
+      "name": "Töpfe",
+      "image": "/src/assets/list2.png",
+      "price": "$ 963.85",
+      "category": "sản phẩm 2",
+      "id": 2
+    },
+    {
+      "name": "Licht",
+      "image": "/src/assets/list3.png",
+      "price": "$ 963.85",
+      "category": "sản phẩm 3",
+      "id": 3
+    },
+    {
+      "name": "Lichthänger-Set",
+      "image": "/src/assets/list4.png",
+      "price": "$ 963.85",
+      "category": "sản phẩm 4",
+      "id": 4
+    },
+    {
+      "name": "Nguyen Van Nam",
+      "image": "/src/assets/list5.png",
+      "price": "549000",
+      "category": "5",
+      "id": 5
+    },
+    {
+      "name": "Töpfe",
+      "image": "/src/assets/list6.png",
+      "price": "$ 963.85",
+      "category": "sản phẩm 2",
+      "id": 6
+    },
+    {
+      "name": "Töpfe",
+      "image": "/src/assets/list7.png",
+      "price": "$ 963.85",
+      "category": "sản phẩm 2",
+      "id": 7
+    },
+    {
+      "name": "Licht",
+      "image": "/src/assets/list8.png",
+      "price": "$ 963.85",
+      "category": "sản phẩm 3",
+      "id": 8
+    },
+    {
+      "name": "Licht",
+      "image": "/src/assets/list9.png",
+      "price": "$ 963.85",
+      "category": "sản phẩm 3",
+      "id": 9
+    },
+    {
+      "name": "1",
+      "image": "1",
+      "price": "1",
+      "category": "1",
+      "id": 10
+    }
+  ],
+  "categorys": [
+    {
+      "id": 1,
+      "name": "sản phẩm 1"
+    },
+    {
+      "id": 2,
+      "name": "sản phẩm 2"
+    },
+    {
+      "id": 3,
+      "name": "sản phẩm 3"
+    },
+    {
+      "name": "sản phẩm 4",
+      "id": 4
+    },
+    {
+      "name": "sản phẩm 5",
+      "id": 5
+    }
+  ]
+}
