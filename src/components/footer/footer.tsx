@@ -10,13 +10,13 @@ const Footer = (props: Props) => {
       <div className="flex gap-2">
           <div className="">
             <h1 className="text-4xl mb-4 px-20 text-[#505F4E]" style={{fontFamily:'Baloo',fontWeight:'bold'}}>
-              <div>Etwas abonnieren *</div>
-              <div>_ Unser Newsletter</div>
+              <div>Đăng ký nhận thông tin * </div>
+              <div>_ Bản tin của chúng tôi</div>
             </h1>
             <p className="text-gray-600 text-[#505F4E] mx-[120px]">
-           <p>Get weekly update about our </p>
-           <p>product on your email, no spam</p>
-           <p>guaranteed we promise ✌️</p>
+           <p>Nhận cập nhật hàng tuần về </p>
+           <p>sản phẩm qua email của bạn, không spam</p>
+           <p>đảm bảo, chúng tôi hứa ✌️</p>
             </p>
           </div>
           <div className='py-[100px]'>
@@ -38,11 +38,11 @@ const Footer = (props: Props) => {
         </div>
     </div>
         <div className='bg-[#053D29] w-full h-[296px]'>
-              <div className=' flex items-center justify-center gap-[150px] py-6'>
+              <div className=' flex items-center justify-center gap-[150px] py-6 px-10'>
                 <div className='flex flex-col text-white'>
-                  <p className='text-[12.55px]'>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                  <p className='text-[12.55px]'>elit, sed do eiusmod tempor incididunt ut labore et</p>
-                  <p className='text-[12.55px]'>dolore magna aliqua</p>
+                  <p className='text-[12.55px]'>Công ty Cổ phần Thương mại Boo</p>
+                  <p className='text-[12.55px]'>Trụ sở: 19A Đặng Trần Côn, P.Quốc Tử Giám, Q.Đống Đa, Tp.Hà Nội, Việt Nam.</p>
+                  <p className='text-[12.55px]'>Văn phòng: Tầng 2, tòa nhà Kim Khí Thăng Long, số 1 Lương Yên, P.Bạch Đằng, Q.Hai Bà Trưng, Tp.Hà Nội, Việt Nam.</p>
                   <div className='flex gap-8 pt-6'>
                     <div className='w-[13.38px] h-[10.87]'>
                       <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-facebook" viewBox="0 0 16 16">
@@ -60,27 +60,27 @@ const Footer = (props: Props) => {
                   </div>
                 </div>
                 <div className='flex flex-col text-white'>
-                  <h3 className='py-3'>Um</h3>
-                  <p className='text-[11.71px] py-2'>Kontaktiere uns</p>
-                  <p className='text-[11.71px] py-2'>Über uns</p>
-                  <p className='text-[11.71px] py-2'>Karriere</p>
-                  <p className='text-[11.71px] py-2'>Unternehmensinformationen </p>
+                  <h3 className='py-3 text-[12.71px]'>BOO</h3>
+                  <p className='text-[11.71px] py-2'>Về BOO</p>
+                  <p className='text-[11.71px] py-2'>Về đại lý</p>
+                  <p className='text-[11.71px] py-2'>Tuyển dụng</p>
+                  <p className='text-[11.71px] py-2'>Đặt làm đồng phục</p>
                 </div>
                 <div className='flex flex-col text-white'>
-                  <h3 className='py-3'>Hilfe</h3>
-                  <p className='text-[11.71px] py-2' >Unsere Produzenten</p>
-                  <p className='text-[11.71px] py-2'>Zahlung</p>
-                  <p className='text-[11.71px] py-2'>Versand</p>
-                  <p className='text-[11.71px] py-2'>Stornierung & Rückgabe</p>
-                  <p className='text-[11.71px] py-2'>Verstoß melden</p>
+                  <h3 className='py-3 text-[12.71px]'>HỖ TRỢ KHÁCH HÀNG </h3>
+                  <p className='text-[11.71px] py-2' >FAQ</p>
+                  <p className='text-[11.71px] py-2'>Đăng nhập/Đăng ký thành viên</p>
+                  <p className='text-[11.71px] py-2'>Chính sách thành viên</p>
+                  <p className='text-[11.71px] py-2'>Hướng dẫn mua hàng trực tuyến</p>
+                  <p className='text-[11.71px] py-2'>Đổi/trả & Hoàn tiền</p>
                 </div>
                 <div className='flex flex-col text-white'>
-                  <h3 className='py-3'>Rücknahmegarantie</h3>
-                  <p className='text-[11.71px] py-2'>Kontaktiere uns</p>
-                  <p className='text-[11.71px] py-2'>Nutzungsbedingungen</p>
-                  <p className='text-[11.71px] py-2'>Sicherheit</p>
-                  <p className='text-[11.71px] py-2'>Privatsphäre</p>
-                  <p className='text-[11.71px] py-2'>Seitenverzeichnis</p>
+                  <h4 className='py-3 text-[12.71px]'>HOTLINE</h4>
+                  <p className='text-[11.71px] py-2'>Kênh CSKH: BOO Zalo OA </p>
+                  <p className='text-[11.71px] py-2'>(T2 - T6, 8h30 - 17h30)</p>
+                  <p className='text-[11.71px] py-2'>(T7, 8h30 - 12h00)</p>
+                  <p className='text-[11.71px] py-2'>Chính sách bảo hành</p>
+                  <p className='text-[11.71px] py-2'>Email: online@boo.vn</p>
                 </div>
               </div>
           </div>

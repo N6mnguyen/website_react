@@ -18,96 +18,144 @@
   ],
   "products": [
     {
-      "name": "Töpfe",
+      "name": "Thùng rác nhỏ",
       "image": "/src/assets/list1.png",
       "price": "123",
-      "category": "sản phẩm 2",
+      "category": "sản phẩm 5",
       "id": 1
     },
     {
-      "name": "Töpfe",
+      "name": "Chậu cây",
       "image": "/src/assets/list2.png",
-      "price": "$ 963.85",
+      "price": "963.85",
       "category": "sản phẩm 2",
+      "description": " Về mặt hàng này Thùng rác toàn thân tại nhà của bạn - Với dung tích 15 lít, thùng rác này có thể được đặt trong nhiều phòng khác nhau trong toàn bộ ngôi nhà, từ nhà bếp hoặc văn phòng tại nhà",
       "id": 2
     },
     {
-      "name": "Licht",
+      "name": "Thùng rác to",
       "image": "/src/assets/list3.png",
-      "price": "$ 963.85",
+      "price": "963.85",
       "category": "sản phẩm 3",
+      "description": " Về mặt hàng này Thùng rác toàn thân tại nhà của bạn - Với dung tích 15 lít, thùng rác này có thể được đặt trong nhiều phòng khác nhau trong toàn bộ ngôi nhà, từ nhà bếp hoặc văn phòng tại nhà",
       "id": 3
     },
     {
-      "name": "Lichthänger-Set",
+      "name": "Thùng rác trong nhà",
       "image": "/src/assets/list4.png",
-      "price": "$ 963.85",
+      "price": "963.85",
       "category": "sản phẩm 4",
+      "description": " Về mặt hàng này Thùng rác toàn thân tại nhà của bạn - Với dung tích 15 lít, thùng rác này có thể được đặt trong nhiều phòng khác nhau trong toàn bộ ngôi nhà, từ nhà bếp hoặc văn phòng tại nhà",
       "id": 4
     },
     {
-      "name": "Nguyen Van Nam",
+      "name": "Thùng rác",
       "image": "/src/assets/list5.png",
-      "price": "549000",
+      "price": "5490",
       "category": "5",
+      "description": " Về mặt hàng này Thùng rác toàn thân tại nhà của bạn - Với dung tích 15 lít, thùng rác này có thể được đặt trong nhiều phòng khác nhau trong toàn bộ ngôi nhà, từ nhà bếp hoặc văn phòng tại nhà",
       "id": 5
     },
     {
-      "name": "Töpfe",
+      "name": "Thùng rác trong nhà",
       "image": "/src/assets/list6.png",
-      "price": "$ 963.85",
+      "price": "963.85",
       "category": "sản phẩm 2",
+      "description": " Về mặt hàng này Thùng rác toàn thân tại nhà của bạn - Với dung tích 15 lít, thùng rác này có thể được đặt trong nhiều phòng khác nhau trong toàn bộ ngôi nhà, từ nhà bếp hoặc văn phòng tại nhà",
       "id": 6
     },
     {
-      "name": "Töpfe",
+      "name": "Thùng rác",
       "image": "/src/assets/list7.png",
-      "price": "$ 963.85",
+      "price": "963.85",
       "category": "sản phẩm 2",
+      "description": " Về mặt hàng này Thùng rác toàn thân tại nhà của bạn - Với dung tích 15 lít, thùng rác này có thể được đặt trong nhiều phòng khác nhau trong toàn bộ ngôi nhà, từ nhà bếp hoặc văn phòng tại nhà",
       "id": 7
     },
     {
-      "name": "Licht",
+      "name": "Chậu cây sứ",
       "image": "/src/assets/list8.png",
-      "price": "$ 963.85",
+      "price": "963.85",
       "category": "sản phẩm 3",
+      "description": " Về mặt hàng này Thùng rác toàn thân tại nhà của bạn - Với dung tích 15 lít, thùng rác này có thể được đặt trong nhiều phòng khác nhau trong toàn bộ ngôi nhà, từ nhà bếp hoặc văn phòng tại nhà",
       "id": 8
     },
     {
-      "name": "Licht",
+      "name": "Chậu",
       "image": "/src/assets/list9.png",
-      "price": "$ 963.85",
+      "price": "963.85",
       "category": "sản phẩm 3",
       "id": 9
-    },
-    {
-      "name": "1",
-      "image": "1",
-      "price": "1",
-      "category": "1",
-      "id": 10
     }
   ],
   "categorys": [
     {
-      "id": 1,
-      "name": "sản phẩm 1"
+      "name": "sản phẩm 1",
+      "image": "/src/assets/cat3.png",
+      "itemCount": "21",
+      "id": 1
     },
     {
-      "id": 2,
-      "name": "sản phẩm 2"
+      "name": "sản phẩm 2",
+      "image": "/src/assets/category.png",
+      "itemCount": "123",
+      "id": 2
     },
     {
-      "id": 3,
-      "name": "sản phẩm 3"
+      "name": "sản phẩm 3",
+      "image": "/src/assets/cat6.png",
+      "itemCount": 20,
+      "id": 3
     },
     {
       "name": "sản phẩm 4",
+      "image": "/src/assets/cat4.png",
+      "itemCount": 20,
       "id": 4
     },
     {
       "name": "sản phẩm 5",
+      "image": "/src/assets/cat8.png",
+      "itemCount": 20,
       "id": 5
+    },
+    {
+      "name": "sản phẩm 6",
+      "image": "/src/assets/cat6.png",
+      "itemCount": 20,
+      "id": 6
+    },
+    {
+      "name": "sản phẩm 7",
+      "image": "/src/assets/cat7.png",
+      "itemCount": 30,
+      "id": 7
+    },
+    {
+      "name": "sản phẩm 8",
+      "image": "/src/assets/cat8.png",
+      "itemCount": 20,
+      "id": 8
+    }
+  ],
+  "users": [
+    {
+      "email": "namnvph38661@fpt.edu.vn",
+      "password": "$2a$10$6pLSDzeBrbi2Gf3B3020yuHzrk/qgzq47Q.4977kKJNgQEBUT0/7O",
+      "name": "Nguyen Van Nam",
+      "id": 1
+    },
+    {
+      "email": "namnvph38662@fpt.edu.vn",
+      "password": "$2a$10$FthlEOBjHTUgD7zY/iC/jOf9cxcGwM8eTuqyRI9uVNmdWx4HEPh9W",
+      "name": "Nguyen Van Nam",
+      "id": 2
+    },
+    {
+      "email": "namnvph38660@fpt.edu.vn",
+      "password": "$2a$10$sIDBBSlDxA1mWX70gbsfiuplCJP5BF0/UjOuyStkQwbJzK0warVim",
+      "name": "Nguyen Van Nam",
+      "id": 3
     }
   ]
 }

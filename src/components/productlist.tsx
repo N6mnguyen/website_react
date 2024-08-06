@@ -12,18 +12,18 @@ const ProductList = ({products,deleteProduct}: Props) => {
     <>  
 <table>
     <thead>
-    <tr className='flex gap-[220px] py-2 px-4 text-white bg-blue-800 rounded-[18px]'>
+    <tr className='flex gap-[220px] py-2 px-3 text-white bg-gradient-to-r from-[#4E7C32] to-[#b0b5a1] rounded-[18px] text-[12px]'>
         <th>STT</th>
         <th>Ảnh</th>
         <th>Tên SP</th>
         <th>Giá tiền</th>
-        <th> Danh Muc</th>
+        <th>Danh Muc</th>
         <th>Thao tác</th>
     </tr>
     </thead>
     <tbody>
         {products.map((product,index:number)=>(
-            <tr className='flex item-center justify-between py-3 px-4 ' key={product.id}>
+            <tr className='flex item-center justify-between py-3 px-4-=- ' key={product.id}>
                 <td>{index+1}</td>
                 <td><img width={90} src={product.image}/></td>
                 <td>{product.name}</td>

@@ -1,3 +1,4 @@
+import axios from "axios";
 import api from "../config/axios";
 import { FormData, IProduct } from "../interface/product";
 
@@ -57,11 +58,12 @@ export const SearchProducts = async (searchTerm: string): Promise<IProduct[]> =>
     }
 };
 
-export const GetProductsByCategory = async (category: string): Promise<IProduct[]> => {
+export const GetProductsByCategory = async (categoryId: string): Promise<IProduct[]> => {
     try {
-        const { data } = await api.get(`products?category=${category}`);
-        return data;
+        const response = await axios.get(`/products?category=${categoryId}`);
+        return response.data;
     } catch (error) {
-        throw new Error('Error fetching products by category');
+        console.error("Error fetching products by category:", error);
+        return [];
     }
 };

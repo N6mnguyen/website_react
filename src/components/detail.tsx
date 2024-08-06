@@ -1,30 +1,45 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { IProduct } from '../interface/product';
 
-type Props = {}
+interface DetailProps {
+  products: IProduct[];
+}
 
-const Detail = (props: Props) => {
+const Detail: React.FC<DetailProps> = ({ products }) => {
+  const { id } = useParams<{ id: string }>();
+  const [product, setProduct] = useState<IProduct | null>(null);
+
+  useEffect(() => {
+    // Tìm sản phẩm theo ID từ danh sách sản phẩm
+    const foundProduct = products.find(product => product.id === parseInt(id || '0', 10));
+    setProduct(foundProduct || null);
+  }, [id, products]);
+
+  if (!product) return <p>Không có sản phẩm!</p>;
+
   return (
     <>
     <div>
         <div className="bg-white p-8 rounded-lg  flex flex-col lg:flex-row py-[108px]">
             <div className="lg:w-1/2">
-                <img className="w-[355px] h-[355px] mx-auto" src="/src/assets/cart.png" alt="Square cultivation pot"/>
+                <img className="w-[355px] h-[355px] mx-auto" src={product.image} alt="Square cultivation pot"/>
                 <div className="mt-4 flex justify-center space-x-4">
-                    <img className="w-[106px] h-[106px] border" src="/src/assets/cart3.png" alt="Thumbnail 1"/>
-                    <img className="w-[106px] h-[106px] border" src="/src/assets/cart1.png" alt="Thumbnail 2"/>
-                    <img className="w-[106px] h-[106px] border" src="/src/assets/cart2.png" alt="Thumbnail 3"/>
+                    <img className="w-[106px] h-[106px] border" src={product.image} alt="Thumbnail 1"/>
+                    <img className="w-[106px] h-[106px] border" src={product.image} alt="Thumbnail 2"/>
+                    <img className="w-[106px] h-[106px] border" src={product.image} alt="Thumbnail 3"/>
                 </div>
             </div>
             <div className="lg:w-1/2 lg:ml-8 mt-8 lg:mt-0 px-[60px]">
-                <span className="text-[#4E7C32] uppercase tracking-wider font-bold">Plant</span>
-                <h1 className="text-[44px] font-bold mt-2">Square cultivation pots 0.27 to 2 litres</h1>
-                <p className="text-[#68707D] mt-4 text-[16px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+                <span className="text-[#4E7C32] uppercase tracking-wider font-bold">Cây</span>
+                <h1 className="text-[44px] font-bold mt-2">{product.name}</h1>
+                <p className="text-[#68707D] mt-4 text-[16px]">{product.description}</p>
                 <div className="mt-6 flex flex-col">
                   <div>
-                    <span className="text-[30px] font-bold">$125.00</span>
+                    <span className="text-[30px] font-bold">{product.price}</span>
                     <span className="text-[#505F4E] ml-4 text-[16px] font-bold border border-1 rounded-[5px] bg-[#FFEDE0] w-[51.21px] h-[28.67px]">50%</span>
                   </div>
-                    <span className="line-through text-[16px] font-bold">$250.00</span>
+                    <span className="line-through text-[16px] font-bold">{product.price}</span>
                 </div>
                 <div className="flex items-center mt-6 ">
                     <button className="bg-[#F7F8FD] px-4 py-2 rounded-l-lg">-</button>
@@ -34,28 +49,23 @@ const Detail = (props: Props) => {
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-5">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
                     </svg>
-                     <p>Add to cart</p>
+                     <p>Thêm giỏ hàng</p>
                     </button>
                 </div>
             </div>
         </div>
     </div>
     <div className='px-[240px] pt-[10px] pb-[40px]'>
-      <div><h1 className='text-[30px] text-[#4E7C32]'>Discription</h1></div>
+      <div><h1 className='text-[30px] text-[#4E7C32]'>Mô tả</h1></div>
       <div>
-        <p className='text-[20px] text-[#665345]'> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-        <p> industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of</p>
-        <p> type and scrambled i</p>
-        </p>
+      {product.description}
       </div>
     </div>
     <div className='mx-auto px-[240px]'>
-      <div><h1 className='text-[30px] text-[#4E7C32]'>About</h1></div>
+      <div><h1 className='text-[30px] text-[#4E7C32]'>Về</h1></div>
       <div>
-        <p className='text-[20px] text-[#665345]'> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-        <p> industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of</p>
-        <p> type and scrambled i</p>
-        </p>
+      Có sẵn túi đựng rác phù hợp tùy chỉnh - Tương thích với mã lót 30S  
+    Hỗ trợ có trụ sở tại Hoa Kỳ - Câu hỏi, thắc mắc hoặc cần các bộ phận thay thế? Nhóm khách hàng thân thiết của chúng tôi đang đứng trước. Vui lòng tham khảo hướng dẫn sử dụng để biết thông tin liên hệ
       </div>
     </div>
     <div className="bg-white p-8 rounded-lg  flex flex-col lg:flex-row py-[69px] ">
@@ -78,7 +88,7 @@ const Detail = (props: Props) => {
         </div>
       </div>
       <div className='lg:w-1/2 px-[300px]'>
-        <button className='w-[118.95px] h-[33.99px] bg-[#4E7C32] text-[14.27px] text-white border border-1 rounded-full'>Write reviews</button>
+        <button className='w-[118.95px] h-[33.99px] bg-[#4E7C32] text-[14.27px] text-white border border-1 rounded-full'>Viết bình luận</button>
       </div>
     </div>
     <div className='mx-[260px] mb-[130px]'>
@@ -145,10 +155,10 @@ const Detail = (props: Props) => {
               </div>
           </div>
           <div className='text-[11.08px] text-[#665345]'>
-            <p>I've been using this cleanser for about five or six months now and my acne </p>
-            <p>is almost completely gone. I really struggled for years with my skin and tried </p>
-            <p>everything possible but this is the only thing that managed to clear up my </p>
-            <p>skin. 100% recommend and will continue to use is for sure.</p>
+            <p>Tôi đã sử dụng sản phẩm làm sạch này khoảng năm hoặc sáu tháng nay và mụn của tôi </p>
+            <p>gần như hoàn toàn biến mất</p>
+            <p>mọi thứ có thể nhưng đây là thứ duy nhất giúp làm sạch</p>
+            <p>da của tôi. Tôi 100% khuyến nghị và chắc chắn sẽ tiếp tục sử dụng.</p>
           </div>
             </div>
         </div>
@@ -166,10 +176,10 @@ const Detail = (props: Props) => {
                 </div>
             </div>
             <div className='text-[11.08px] text-[#665345]'>
-              <p>I've been using this cleanser for about five or six months now and my acne </p>
-              <p>is almost completely gone. I really struggled for years with my skin and tried </p>
-              <p>everything possible but this is the only thing that managed to clear up my </p>
-              <p>skin. 100% recommend and will continue to use is for sure.</p>
+            <p>Tôi đã sử dụng sản phẩm làm sạch này khoảng năm hoặc sáu tháng nay và mụn của tôi </p>
+            <p>gần như hoàn toàn biến mất</p>
+            <p>mọi thứ có thể nhưng đây là thứ duy nhất giúp làm sạch</p>
+            <p>da của tôi. Tôi 100% khuyến nghị và chắc chắn sẽ tiếp tục sử dụng.</p>
             </div>
           </div>
           <div className='px-7'>
@@ -184,10 +194,10 @@ const Detail = (props: Props) => {
                 </div>
             </div>
             <div className='text-[11.08px] text-[#665345]'>
-              <p>I've been using this cleanser for about five or six months now and my acne </p>
-              <p>is almost completely gone. I really struggled for years with my skin and tried </p>
-              <p>everything possible but this is the only thing that managed to clear up my </p>
-              <p>skin. 100% recommend and will continue to use is for sure.</p>
+            <p>Tôi đã sử dụng sản phẩm làm sạch này khoảng năm hoặc sáu tháng nay và mụn của tôi </p>
+            <p>gần như hoàn toàn biến mất</p>
+            <p>mọi thứ có thể nhưng đây là thứ duy nhất giúp làm sạch</p>
+            <p>da của tôi. Tôi 100% khuyến nghị và chắc chắn sẽ tiếp tục sử dụng.</p>
             </div>
           </div>
       </div>
