@@ -13,7 +13,7 @@ type ICategory = {
 };
 
 const AddProduct = ({ onAdd }: Props) => {
-    const { register, handleSubmit } = useForm<FormData>();
+    const { register, handleSubmit,formState:{errors} } = useForm<FormData>();
     const [categories, setCategories] = useState<ICategory[]>([]);
 
     useEffect(() => {
@@ -38,7 +38,8 @@ const AddProduct = ({ onAdd }: Props) => {
             <form className='flex flex-col py-12 w-[500px] mx-auto gap-4' onSubmit={handleSubmit(onSubmit)}>
                 <input className='py-2 px-2 border border-2 rounded-[20px]' type='text' {...register('name')} placeholder='Tên sản phẩm' required />
                 <input className='py-2 px-2 border-2 rounded-[20px]' type='text' {...register('image')} placeholder='Ảnh sản phẩm' required />
-                <input className='py-2 px-2 border-2 rounded-[20px]' type='number' {...register('price')} placeholder='Giá' required />
+                <input className='py-2 px-2 border-2 rounded-[20px]' type='number' {...register('price',{pattern:/^\d*$/})} placeholder='Giá' required />
+                {(errors.price) && <span>giá là số không âm</span>}
                 <select className='py-2 px-2 border-2 rounded-[20px]' {...register("category")}>
                     {categories.map((category) => (
                         <option key={category.id} value={category.id}>{category.name}</option>

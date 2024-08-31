@@ -68,7 +68,7 @@ const Home = ({ products }: Props) => {
       <div className='bg-gradient-to-r from-[#F8F4F0] to-[#F8F4F0]'>
         <h2 className='text-[30px] font-bold text-[#505F4E] pt-5 px-[150px]'>Sản phẩm bán chạy</h2>
         <div className='bg-white h-[429px]'>
-          <div className='grid grid-cols-4 mx-auto px-[150px] gap-[150px] py-[70px]'>
+          <div className='grid grid-cols-4 mx-auto px-[150px] gap-[120px] py-[70px]'>
             {displayProducts.map(product => (
               <ProductItem key={product.id} product={product} />
             ))}

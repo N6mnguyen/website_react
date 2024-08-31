@@ -74,7 +74,7 @@
     },
     {
       "name": "Chậu cây sứ",
-      "image": "/src/assets/list8.png",
+      "image": "/src/assets/list5.png",
       "price": "963.85",
       "category": "sản phẩm 3",
       "description": " Về mặt hàng này Thùng rác toàn thân tại nhà của bạn - Với dung tích 15 lít, thùng rác này có thể được đặt trong nhiều phòng khác nhau trong toàn bộ ngôi nhà, từ nhà bếp hoặc văn phòng tại nhà",
@@ -91,7 +91,7 @@
   "categorys": [
     {
       "name": "sản phẩm 1",
-      "image": "/src/assets/cat3.png",
+      "image": "/src/assets/cat6.png",
       "itemCount": "21",
       "id": 1
     },
@@ -109,7 +109,7 @@
     },
     {
       "name": "sản phẩm 4",
-      "image": "/src/assets/cat4.png",
+      "image": "/src/assets/cat8.png",
       "itemCount": 20,
       "id": 4
     },

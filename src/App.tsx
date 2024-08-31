@@ -17,10 +17,12 @@ import { IProduct, FormData } from './interface/product';
 import { ICategory, FormCate } from './interface/category';
 import { AddProduct, DeleteProductById, GetAllProducts, UpdateProduct } from './services/product';
 import { AddCategory, DeleteCategoryById, GetAllCategorys, UpdateCategory } from './services/category';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import CategoryProducts from './components/categoryProduct';
 import Register from './components/Register';
 import Login from './components/Login';
+import CartContext from './context/cart';
+import ShoppingCart from './components/shoppingCart';
+
 
 
 function App() {
@@ -113,14 +115,13 @@ function App() {
 
   const element = useRoutes([
     {
-      path: '',
-      element: <Client />,
-      children: [
+      path: '',element: <CartContext><Client /></CartContext>,children: [
         { path: '', element: <Home products={products} /> },
         { path: 'list', element: <List products={products} /> },
         { path: 'detail/:id', element: <Detail products={products} /> },
         { path: 'search', element: <Search /> },
         { path: 'category/:id', element: <CategoryProducts/> },
+        {path:'shopping',element:<ShoppingCart products={products}/>},
         {path:'register',Component:Register},
         {path:'login',Component:Login},
       ],
